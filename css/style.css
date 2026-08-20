@@ -73,9 +73,9 @@ a {
 }
 
 .logo-img {
-    height: 40px;
+    height: 44px;
     width: auto;
-    max-width: 190px;
+    max-width: 215px;
     object-fit: contain;
     transition: transform 0.3s ease;
 }
