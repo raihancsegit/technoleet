@@ -430,6 +430,54 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     });
+
+    // ==========================================================================
+    // Typewriter Typing Effect for Hero Heading
+    // ==========================================================================
+    const typedTextEl = document.getElementById('typed-text');
+    if (typedTextEl) {
+        const phrases = [
+            "Smart Software",
+            "Custom ERP Systems",
+            "AI Platforms",
+            "Cloud Architectures",
+            "Scalable SaaS"
+        ];
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        const typeSpeed = 110;
+        const deleteSpeed = 60;
+        const pauseTime = 2200;
+
+        function typeEffect() {
+            const currentPhrase = phrases[phraseIndex];
+
+            if (isDeleting) {
+                typedTextEl.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typedTextEl.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            let currentSpeed = isDeleting ? deleteSpeed : typeSpeed;
+
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                currentSpeed = pauseTime;
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                currentSpeed = 400;
+            }
+
+            setTimeout(typeEffect, currentSpeed);
+        }
+
+        typeEffect();
+    }
 });
 
 
