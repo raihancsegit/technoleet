@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing & Cost Estimator | Technoleet</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#007EDD',
+              secondary: '#101828',
+              surface: '#F9FAFB',
+            },
+            fontFamily: {
+              sans: ['Plus Jakarta Sans', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i data-lucide="hexagon" class="logo-icon"></i>
+                <span class="logo-text">technoleet</span>
+            </a>
+            
+            <!-- Mobile Menu Toggle -->
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+
+            <nav class="nav-menu">
+                <div class="nav-links">
+                    <!-- Products with Mega Menu -->
+                    <div class="nav-item">
+                        <a href="index.html#products" class="nav-link">
+                            Products <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                        </a>
+                        
+                        <div class="megamenu">
+                            <div class="grid grid-cols-12 gap-6">
+                                <!-- Col 1: Software Platforms -->
+                                <div class="col-span-4 border-r border-gray-100 pr-6">
+                                    <div class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4 flex items-center gap-2">
+                                        <i data-lucide="layers" class="w-4 h-4 text-blue-500"></i> Enterprise Platforms
+                                    </div>
+                                    <div class="space-y-2">
+                                        <a href="index.html#products" class="dropdown-item group">
+                                            <div class="w-9 h-9 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                                                <i data-lucide="activity" class="w-5 h-5"></i>
+                                            </div>
+                                            <div>
+                                                <div class="font-bold text-sm text-secondary group-hover:text-blue-600 flex items-center gap-2">
+                                                    LeetERP <span class="bg-blue-100 text-blue-600 text-[10px] px-2 py-0.5 rounded-full uppercase font-extrabold">Hot</span>
+                                                </div>
+                                                <p class="text-xs text-gray-500 font-normal">Full HR, Finance & Supply Chain</p>
+                                            </div>
+                                        </a>
+
+                                        <a href="index.html#products" class="dropdown-item group">
+                                            <div class="w-9 h-9 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center flex-shrink-0 group-hover:bg-purple-600 group-hover:text-white transition-colors">
+                                                <i data-lucide="shopping-cart" class="w-5 h-5"></i>
+                                            </div>
+                                            <div>
+                                                <div class="font-bold text-sm text-secondary group-hover:text-purple-600 flex items-center gap-2">
+                                                    LeetCommerce <span class="bg-purple-100 text-purple-600 text-[10px] px-2 py-0.5 rounded-full uppercase font-extrabold">SaaS</span>
+                                                </div>
+                                                <p class="text-xs text-gray-500 font-normal">Headless B2B & B2C Engine</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- Col 2: Turnkey Solutions -->
+                                <div class="col-span-4 border-r border-gray-100 pr-6">
+                                    <div class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4 flex items-center gap-2">
+                                        <i data-lucide="box" class="w-4 h-4 text-purple-500"></i> Turnkey Systems
+                                    </div>
+                                    <div class="space-y-2">
+                                        <a href="index.html#products" class="dropdown-item group">
+                                            <div class="w-9 h-9 rounded-xl bg-pink-50 text-pink-600 flex items-center justify-center flex-shrink-0 group-hover:bg-pink-600 group-hover:text-white transition-colors">
+                                                <i data-lucide="utensils" class="w-5 h-5"></i>
+                                            </div>
+                                            <div>
+                                                <div class="font-bold text-sm text-secondary group-hover:text-pink-600 flex items-center gap-2">
+                                                    FoodNanny <span class="bg-pink-100 text-pink-600 text-[10px] px-2 py-0.5 rounded-full uppercase font-extrabold">Popular</span>
+                                                </div>
+                                                <p class="text-xs text-gray-500 font-normal">Multi-Vendor Food Delivery</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- Col 3: Banner -->
+                                <div class="col-span-4">
+                                    <div class="bg-gradient-to-br from-blue-600 to-indigo-700 p-6 rounded-2xl text-white relative overflow-hidden h-full flex flex-col justify-between shadow-xl">
+                                        <div>
+                                            <span class="inline-block px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-[11px] font-bold tracking-wider uppercase mb-3 text-blue-100">
+                                                SPECIAL PRICING
+                                            </span>
+                                            <h4 class="text-xl font-extrabold mb-2">Build Your Custom Stack</h4>
+                                            <p class="text-xs text-blue-100 leading-relaxed font-light mb-4">
+                                                Calculate exact timelines and pricing for custom enterprise developments.
+                                            </p>
+                                        </div>
+                                        <a href="contact.html" class="inline-flex items-center gap-2 text-xs font-bold bg-white text-blue-600 px-4 py-2.5 rounded-full hover:bg-blue-50 transition-colors w-fit shadow-md">
+                                            Talk to Engineers <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-item">
+                        <a href="index.html#services" class="nav-link">Solutions</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="pricing.html" class="nav-link active-scroll">Pricing</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </div>
+                </div>
+                
+                <div class="nav-actions">
+                    <a href="contact.html" class="btn btn-primary-round">Hire Us</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Pricing Hero Section -->
+    <main class="py-20 bg-gradient-to-b from-blue-50/50 to-white text-center">
+        <div class="container mx-auto px-6 max-w-[1000px]">
+            <span class="inline-block px-4 py-1.5 bg-blue-100 text-blue-700 rounded-full text-xs font-bold uppercase tracking-widest mb-4">Transparent Pricing</span>
+            <h1 class="text-5xl md:text-6xl font-extrabold text-secondary mb-6">Simple, Predictable <span class="text-primary">Pricing</span></h1>
+            <p class="text-gray-500 text-xl font-light max-w-2xl mx-auto">No hidden fees, no surprise overages. Choose a plan or estimate your custom project cost below.</p>
+        </div>
+    </main>
+
+    <!-- Pricing & Project Cost ROI Estimator Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6 max-w-[1300px]">
+            <div class="text-center mb-16">
+                <!-- Billing Switcher -->
+                <div class="inline-flex items-center gap-3 bg-gray-100 p-1.5 rounded-full border border-gray-200">
+                    <span class="text-sm font-bold text-gray-700 px-3">Monthly</span>
+                    <label class="relative inline-flex items-center cursor-pointer">
+                        <input type="checkbox" id="pricing-toggle" class="sr-only peer">
+                        <div class="w-13 h-7 bg-gray-300 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-blue-600"></div>
+                    </label>
+                    <span class="text-sm font-bold text-gray-700 px-3 flex items-center gap-2">
+                        Annually <span class="bg-emerald-100 text-emerald-700 text-[10px] font-extrabold px-2 py-0.5 rounded-full uppercase">Save 20%</span>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Pricing Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24 max-w-[1200px] mx-auto">
+                <!-- Plan 1 -->
+                <div class="bg-gray-50/80 rounded-[32px] p-10 border border-gray-100 flex flex-col justify-between hover:shadow-xl transition-all duration-300">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-blue-600 bg-blue-50 px-3 py-1 rounded-full">Starter</span>
+                        <h3 class="text-2xl font-extrabold text-secondary mt-4 mb-2">SME Platform</h3>
+                        <p class="text-gray-500 text-sm mb-6">Ideal for single store or small growing teams.</p>
+                        <div class="text-4xl font-extrabold text-secondary mb-6 flex items-baseline gap-1">
+                            <span class="price-val" data-monthly="$499" data-annual="$399">$499</span>
+                            <span class="text-sm font-normal text-gray-400">/month</span>
+                        </div>
+                        <ul class="space-y-4 text-sm text-gray-600 mb-8 border-t border-gray-200/60 pt-6">
+                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Up to 5 Staff Users</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Core POS & Inventory</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Standard REST API</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> 99.5% SLA Uptime</li>
+                        </ul>
+                    </div>
+                    <a href="contact.html" class="btn btn-outline-round text-center w-full block font-bold">Choose Starter</a>
+                </div>
+
+                <!-- Plan 2 (Highlighted) -->
+                <div class="bg-[#0c1322] text-white rounded-[32px] p-10 border border-blue-500/30 flex flex-col justify-between shadow-2xl relative overflow-hidden transform md:-translate-y-4">
+                    <div class="absolute top-0 right-0 bg-gradient-to-l from-blue-600 to-purple-600 text-white text-[10px] font-extrabold px-4 py-1.5 rounded-bl-2xl uppercase tracking-widest">Most Popular</div>
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-blue-400 bg-blue-500/10 px-3 py-1 rounded-full border border-blue-400/20">Growth</span>
+                        <h3 class="text-2xl font-extrabold text-white mt-4 mb-2">Enterprise Suite</h3>
+                        <p class="text-gray-300 text-sm mb-6">Multi-branch operations & AI reporting.</p>
+                        <div class="text-4xl font-extrabold text-white mb-6 flex items-baseline gap-1">
+                            <span class="price-val" data-monthly="$1,299" data-annual="$999">$1,299</span>
+                            <span class="text-sm font-normal text-gray-400">/month</span>
+                        </div>
+                        <ul class="space-y-4 text-sm text-gray-300 mb-8 border-t border-white/10 pt-6">
+                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-blue-400"></i> Unlimited Users & Branches</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-blue-400"></i> Full LeetERP & AI Analytics</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-blue-400"></i> Native Flutter Apps Included</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-blue-400"></i> 24/7 Dedicated Support</li>
+                        </ul>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary-round text-center w-full block font-bold shadow-lg shadow-blue-500/30">Get Started Growth</a>
+                </div>
+
+                <!-- Plan 3 -->
+                <div class="bg-gray-50/80 rounded-[32px] p-10 border border-gray-100 flex flex-col justify-between hover:shadow-xl transition-all duration-300">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-purple-600 bg-purple-50 px-3 py-1 rounded-full">Custom</span>
+                        <h3 class="text-2xl font-extrabold text-secondary mt-4 mb-2">Tailored Solution</h3>
+                        <p class="text-gray-500 text-sm mb-6">Full custom build with dedicated cloud engine.</p>
+                        <div class="text-4xl font-extrabold text-secondary mb-6">
+                            Custom
+                        </div>
+                        <ul class="space-y-4 text-sm text-gray-600 mb-8 border-t border-gray-200/60 pt-6">
+                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Dedicated Solutions Architect</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> On-Premise or Private Cloud</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Custom API & Legacy Sync</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> 99.99% SLA Guarantee</li>
+                        </ul>
+                    </div>
+                    <a href="contact.html" class="btn btn-outline-round text-center w-full block font-bold">Contact Sales</a>
+                </div>
+            </div>
+
+            <!-- Interactive ROI & Project Cost Calculator Widget -->
+            <div class="bg-gradient-to-br from-blue-50 via-white to-purple-50 rounded-[40px] p-8 md:p-12 border border-blue-100 shadow-xl max-w-4xl mx-auto">
+                <div class="text-center mb-8">
+                    <span class="text-xs font-bold uppercase tracking-widest text-blue-600 bg-white px-4 py-1.5 rounded-full border border-blue-100 shadow-sm">Interactive Calculator</span>
+                    <h3 class="text-2xl md:text-3xl font-extrabold text-secondary mt-3">Estimate Your Custom Project Cost</h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-bold text-secondary mb-2">Project Scope / Modules: <span id="module-count-display" class="text-blue-600">3 Modules</span></label>
+                            <input type="range" id="module-slider" min="1" max="10" value="3" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-bold text-secondary mb-3">Add-On Features:</label>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 text-sm font-semibold text-gray-700 cursor-pointer">
+                                    <input type="checkbox" id="addon-app" class="w-4 h-4 rounded text-blue-600 focus:ring-blue-500" checked>
+                                    Mobile App (Flutter iOS/Android) (+$1,000)
+                                </label>
+                                <label class="flex items-center gap-3 text-sm font-semibold text-gray-700 cursor-pointer">
+                                    <input type="checkbox" id="addon-ai" class="w-4 h-4 rounded text-blue-600 focus:ring-blue-500">
+                                    AI Predictive Analytics Engine (+$800)
+                                </label>
+                                <label class="flex items-center gap-3 text-sm font-semibold text-gray-700 cursor-pointer">
+                                    <input type="checkbox" id="addon-sla" class="w-4 h-4 rounded text-blue-600 focus:ring-blue-500">
+                                    24/7 Dedicated SLA Support (+$500)
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-md text-center">
+                        <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">Estimated Project Cost</span>
+                        <div id="calc-total-price" class="text-4xl font-extrabold text-blue-600 my-3">$2,500</div>
+                        <p id="calc-delivery-time" class="text-xs font-bold text-gray-500 mb-6">Estimated Delivery: 3-4 Weeks</p>
+                        <a href="contact.html" class="btn btn-primary-round w-full block text-center font-bold text-sm">Request Formal Proposal</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Searchable FAQ Section -->
+    <section class="py-24 bg-gray-50 relative overflow-hidden border-t border-gray-100">
+        <div class="container mx-auto px-6 max-w-[1000px] relative z-10">
+            <div class="text-center mb-16">
+                <div class="inline-block px-4 py-2 bg-white rounded-full text-primary font-bold text-sm tracking-wide shadow-sm border border-gray-100 mb-6">HELP CENTER</div>
+                <h2 class="text-4xl md:text-5xl font-extrabold text-secondary mb-6 tracking-tight">
+                    Frequently Asked <span class="text-primary">Questions</span>
+                </h2>
+                
+                <!-- FAQ Search Input -->
+                <div class="max-w-md mx-auto relative">
+                    <input type="text" id="faq-search-input" placeholder="Search questions (e.g. ERP, deployment, security)..." class="w-full bg-white border border-gray-200 rounded-full px-6 py-3.5 pl-12 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all text-sm">
+                    <i data-lucide="search" class="w-5 h-5 text-gray-400 absolute left-4 top-3.5"></i>
+                </div>
+            </div>
+
+            <!-- FAQ Accordion List -->
+            <div class="space-y-4" id="faq-list">
+                <div class="faq-item bg-white rounded-2xl p-6 border border-gray-100 shadow-sm transition-all duration-300">
+                    <button class="faq-toggle w-full flex items-center justify-between font-bold text-lg text-secondary text-left gap-4 bg-transparent border-0 cursor-pointer">
+                        <span>What makes Technoleet ERP different from off-the-shelf software?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transform transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden pt-4 text-gray-500 text-sm leading-relaxed border-t border-gray-100 mt-4">
+                        Technoleet ERP is engineered with modern microservice architecture, real-time sync, and built-in AI analytics. Unlike legacy ERPs, it requires zero clunky installations and works seamlessly across multi-branch environments.
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-2xl p-6 border border-gray-100 shadow-sm transition-all duration-300">
+                    <button class="faq-toggle w-full flex items-center justify-between font-bold text-lg text-secondary text-left gap-4 bg-transparent border-0 cursor-pointer">
+                        <span>How fast can we deploy a Technoleet solution?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transform transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden pt-4 text-gray-500 text-sm leading-relaxed border-t border-gray-100 mt-4">
+                        Our cloud SaaS solutions (LeetERP, LeetCommerce, ShopKing) can be launched in under 48 hours. Custom enterprise projects typically deploy within 2 to 6 weeks.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-100 pt-16 pb-8">
+        <div class="container mx-auto px-6 max-w-[1300px]">
+            <div class="border-t border-gray-100 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-gray-500 text-sm">© 2026 Technoleet. All rights reserved.</p>
+                <div class="flex items-center gap-4 text-sm text-gray-500">
+                    <a href="index.html" class="hover:text-primary transition-colors">Home</a>
+                    <span>|</span>
+                    <a href="pricing.html" class="hover:text-primary transition-colors">Pricing</a>
+                    <span>|</span>
+                    <a href="contact.html" class="hover:text-primary transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" title="Back to top">
+        <i data-lucide="arrow-up" class="w-5 h-5"></i>
+    </button>
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container"></div>
+
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>

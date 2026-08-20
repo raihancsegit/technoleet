@@ -415,6 +415,21 @@ document.addEventListener('DOMContentLoaded', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     }
+
+    // Mobile Submenu & Mega Menu Accordion Toggle
+    const navItemsWithSubmenu = document.querySelectorAll('.nav-item');
+    navItemsWithSubmenu.forEach(item => {
+        const link = item.querySelector('.nav-link');
+        const hasSubmenu = item.querySelector('.dropdown-menu') || item.querySelector('.megamenu');
+        if (link && hasSubmenu) {
+            link.addEventListener('click', (e) => {
+                if (window.innerWidth <= 992) {
+                    e.preventDefault();
+                    item.classList.toggle('mobile-expanded');
+                }
+            });
+        }
+    });
 });
 
 
