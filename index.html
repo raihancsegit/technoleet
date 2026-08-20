@@ -342,8 +342,10 @@
                     Technoleet delivers high-performance enterprise applications and modern ERP systems. We transform your ideas into scalable digital products that drive unprecedented growth and efficiency.
                 </p>
                 <div class="hero-buttons">
-                    <a href="#" class="btn btn-primary-large">Explore Solutions</a>
-                    <a href="#" class="btn btn-outline-large">Contact Sales</a>
+                    <a href="#products" class="btn btn-primary-large">Explore Solutions</a>
+                    <button id="hero-watch-demo" class="btn btn-outline-large flex items-center gap-2 cursor-pointer">
+                        <i data-lucide="play-circle" class="w-5 h-5 text-blue-500"></i> Watch Demo
+                    </button>
                 </div>
             </div>
 
@@ -416,7 +418,7 @@
     </section>
 
     <!-- Next-Gen Services Section -->
-    <section class="py-32 bg-gray-50 relative overflow-hidden">
+    <section id="services" class="py-32 bg-gray-50 relative overflow-hidden">
         <!-- Floating Animated Blobs -->
         <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-400/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3 animate-pulse"></div>
         <div class="absolute bottom-0 left-0 w-[800px] h-[800px] bg-purple-400/10 rounded-full blur-[100px] translate-y-1/3 -translate-x-1/3 animate-pulse" style="animation-delay: 2s;"></div>
@@ -479,7 +481,7 @@
     </section>
 
     <!-- Technoleet In Number Section -->
-    <section class="py-32 bg-slate-50 relative overflow-hidden border-b border-gray-100">
+    <section id="stats" class="py-32 bg-slate-50 relative overflow-hidden border-b border-gray-100">
         <div class="container mx-auto px-6 max-w-[1300px] relative z-10">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <!-- Live Operational Status Indicator -->
@@ -590,7 +592,7 @@
     </section>
 
     <!-- Technology Stack Section -->
-    <section class="py-32 bg-white relative overflow-hidden border-y border-gray-100">
+    <section id="tech" class="py-32 bg-white relative overflow-hidden border-y border-gray-100">
         <!-- Background Ambient Glow -->
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-blue-50/50 rounded-full blur-[140px] pointer-events-none"></div>
 
@@ -815,14 +817,14 @@
     </section>
 
     <!-- Core Products Section -->
-    <section class="py-32 relative overflow-hidden bg-white">
+    <section id="products" class="py-32 relative overflow-hidden bg-white">
         <!-- Background decorative elements -->
         <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-bl from-blue-50 to-transparent rounded-full blur-3xl"></div>
         <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-tr from-purple-50 to-transparent rounded-full blur-3xl"></div>
         <div class="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.02)_1px,transparent_1px)] bg-[size:3rem_3rem]"></div>
 
         <div class="container mx-auto px-6 max-w-[1300px] relative z-10">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
                 <div class="md:w-2/3">
                     <div class="inline-flex items-center justify-center px-6 py-2 bg-gradient-to-r from-blue-50 to-purple-50 rounded-full text-blue-600 font-bold text-sm tracking-widest border border-blue-100 mb-6 uppercase gap-2 shadow-sm">
                         <i data-lucide="zap" class="w-4 h-4 text-orange-500 animate-pulse"></i> Our Flagship Products
@@ -833,15 +835,23 @@
                     </h2>
                 </div>
                 <div>
-                    <a href="#" class="px-8 py-4 bg-[#030b14] text-white font-bold rounded-full shadow-[0_10px_30px_rgba(3,11,20,0.2)] hover:scale-105 hover:shadow-[0_20px_40px_rgba(3,11,20,0.3)] transition-all duration-300 flex items-center gap-2 group">
-                        Explore Ecosystem <i data-lucide="arrow-up-right" class="w-5 h-5 group-hover:rotate-45 transition-transform"></i>
+                    <a href="#contact" class="px-8 py-4 bg-[#030b14] text-white font-bold rounded-full shadow-[0_10px_30px_rgba(3,11,20,0.2)] hover:scale-105 hover:shadow-[0_20px_40px_rgba(3,11,20,0.3)] transition-all duration-300 flex items-center gap-2 group">
+                        Request Ecosystem Demo <i data-lucide="arrow-up-right" class="w-5 h-5 group-hover:rotate-45 transition-transform"></i>
                     </a>
                 </div>
+            </div>
+
+            <!-- Product Category Filter Switcher -->
+            <div class="flex flex-wrap items-center justify-center gap-3 mb-16 max-w-2xl mx-auto">
+                <button class="filter-tab-btn active-filter px-6 py-2.5 rounded-full text-xs font-bold transition-all border border-transparent shadow-sm" data-category="all">All Products</button>
+                <button class="filter-tab-btn px-6 py-2.5 rounded-full text-xs font-bold text-gray-500 hover:text-gray-900 bg-gray-100/80 hover:bg-gray-200 transition-all border border-transparent" data-category="enterprise">Enterprise ERP</button>
+                <button class="filter-tab-btn px-6 py-2.5 rounded-full text-xs font-bold text-gray-500 hover:text-gray-900 bg-gray-100/80 hover:bg-gray-200 transition-all border border-transparent" data-category="ecommerce">E-Commerce & SaaS</button>
+                <button class="filter-tab-btn px-6 py-2.5 rounded-full text-xs font-bold text-gray-500 hover:text-gray-900 bg-gray-100/80 hover:bg-gray-200 transition-all border border-transparent" data-category="analytics">Analytics & HR</button>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-[1400px] mx-auto">
                 <!-- Product 1 -->
-                <div class="bg-white/60 backdrop-blur-3xl p-10 rounded-[40px] shadow-[0_8px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_30px_60px_rgba(37,99,235,0.15)] transition-all duration-500 border border-white hover:border-blue-100 group relative overflow-hidden transform hover:-translate-y-2">
+                <div class="product-card-item bg-white/60 backdrop-blur-3xl p-10 rounded-[40px] shadow-[0_8px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_30px_60px_rgba(37,99,235,0.15)] transition-all duration-500 border border-white hover:border-blue-100 group relative overflow-hidden transform hover:-translate-y-2" data-category="enterprise">
                     <div class="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     <div class="absolute -right-20 -top-20 w-64 h-64 bg-blue-400/10 rounded-full blur-3xl group-hover:bg-blue-400/20 transition-colors duration-500"></div>
                     
@@ -855,16 +865,16 @@
                     </p>
                     <p class="text-gray-500 text-base mb-8 leading-relaxed relative z-10 font-light">A unified platform to manage HR, finance, supply chain, and operations with real-time AI-driven analytics. Automate your entire enterprise.</p>
                     
-                    <a href="#" class="inline-flex items-center gap-3 text-secondary font-bold text-base hover:text-blue-600 transition-colors relative z-10 group/link">
+                    <button class="open-product-modal inline-flex items-center gap-3 text-secondary font-bold text-base hover:text-blue-600 transition-colors relative z-10 group/link bg-transparent border-0 cursor-pointer" data-title="LeetERP" data-badge="Enterprise Resource Planning" data-desc="A unified platform to manage HR, finance, supply chain, and operations with real-time AI-driven analytics. Automate your entire enterprise.">
                         Explore LeetERP 
                         <div class="w-8 h-8 rounded-full bg-gray-50 group-hover/link:bg-blue-50 flex items-center justify-center transition-colors">
                             <i data-lucide="arrow-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
                         </div>
-                    </a>
+                    </button>
                 </div>
                 
                 <!-- Product 2 -->
-                <div class="bg-white/60 backdrop-blur-3xl p-10 rounded-[40px] shadow-[0_8px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_30px_60px_rgba(168,85,247,0.15)] transition-all duration-500 border border-white hover:border-purple-100 group relative overflow-hidden transform hover:-translate-y-2">
+                <div class="product-card-item bg-white/60 backdrop-blur-3xl p-10 rounded-[40px] shadow-[0_8px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_30px_60px_rgba(168,85,247,0.15)] transition-all duration-500 border border-white hover:border-purple-100 group relative overflow-hidden transform hover:-translate-y-2" data-category="ecommerce">
                     <div class="absolute inset-0 bg-gradient-to-br from-purple-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     <div class="absolute -right-20 -top-20 w-64 h-64 bg-purple-400/10 rounded-full blur-3xl group-hover:bg-purple-400/20 transition-colors duration-500"></div>
                     
@@ -878,16 +888,16 @@
                     </p>
                     <p class="text-gray-500 text-base mb-8 leading-relaxed relative z-10 font-light">Headless e-commerce infrastructure built for massive scale, lightning-fast checkouts, and global multi-currency support.</p>
                     
-                    <a href="#" class="inline-flex items-center gap-3 text-secondary font-bold text-base hover:text-purple-600 transition-colors relative z-10 group/link">
+                    <button class="open-product-modal inline-flex items-center gap-3 text-secondary font-bold text-base hover:text-purple-600 transition-colors relative z-10 group/link bg-transparent border-0 cursor-pointer" data-title="LeetCommerce" data-badge="B2B & B2C Engine" data-desc="Headless e-commerce infrastructure built for massive scale, lightning-fast checkouts, and global multi-currency support.">
                         Explore LeetCommerce 
                         <div class="w-8 h-8 rounded-full bg-gray-50 group-hover/link:bg-purple-50 flex items-center justify-center transition-colors">
                             <i data-lucide="arrow-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
                         </div>
-                    </a>
+                    </button>
                 </div>
                 
                 <!-- Product 3 -->
-                <div class="bg-white/60 backdrop-blur-3xl p-10 rounded-[40px] shadow-[0_8px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_30px_60px_rgba(249,115,22,0.15)] transition-all duration-500 border border-white hover:border-orange-100 group relative overflow-hidden transform hover:-translate-y-2">
+                <div class="product-card-item bg-white/60 backdrop-blur-3xl p-10 rounded-[40px] shadow-[0_8px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_30px_60px_rgba(249,115,22,0.15)] transition-all duration-500 border border-white hover:border-orange-100 group relative overflow-hidden transform hover:-translate-y-2" data-category="analytics">
                     <div class="absolute inset-0 bg-gradient-to-br from-orange-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     <div class="absolute -right-20 -top-20 w-64 h-64 bg-orange-400/10 rounded-full blur-3xl group-hover:bg-orange-400/20 transition-colors duration-500"></div>
                     
@@ -901,16 +911,16 @@
                     </p>
                     <p class="text-gray-500 text-base mb-8 leading-relaxed relative z-10 font-light">Transform raw data into actionable insights with beautiful dashboards, predictive modeling, and automated reporting tools.</p>
                     
-                    <a href="#" class="inline-flex items-center gap-3 text-secondary font-bold text-base hover:text-orange-500 transition-colors relative z-10 group/link">
+                    <button class="open-product-modal inline-flex items-center gap-3 text-secondary font-bold text-base hover:text-orange-500 transition-colors relative z-10 group/link bg-transparent border-0 cursor-pointer" data-title="LeetAnalytics" data-badge="Business Intelligence" data-desc="Transform raw data into actionable insights with beautiful dashboards, predictive modeling, and automated reporting tools.">
                         Explore Analytics 
                         <div class="w-8 h-8 rounded-full bg-gray-50 group-hover/link:bg-orange-50 flex items-center justify-center transition-colors">
                             <i data-lucide="arrow-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
                         </div>
-                    </a>
+                    </button>
                 </div>
                 
                 <!-- Product 4 -->
-                <div class="bg-white/60 backdrop-blur-3xl p-10 rounded-[40px] shadow-[0_8px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_30px_60px_rgba(16,185,129,0.15)] transition-all duration-500 border border-white hover:border-emerald-100 group relative overflow-hidden transform hover:-translate-y-2">
+                <div class="product-card-item bg-white/60 backdrop-blur-3xl p-10 rounded-[40px] shadow-[0_8px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_30px_60px_rgba(16,185,129,0.15)] transition-all duration-500 border border-white hover:border-emerald-100 group relative overflow-hidden transform hover:-translate-y-2" data-category="enterprise">
                     <div class="absolute inset-0 bg-gradient-to-br from-emerald-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     <div class="absolute -right-20 -top-20 w-64 h-64 bg-emerald-400/10 rounded-full blur-3xl group-hover:bg-emerald-400/20 transition-colors duration-500"></div>
                     
@@ -924,16 +934,16 @@
                     </p>
                     <p class="text-gray-500 text-base mb-8 leading-relaxed relative z-10 font-light">Build stronger customer relationships with advanced ticketing, omnichannel support, and intelligent lead tracking.</p>
                     
-                    <a href="#" class="inline-flex items-center gap-3 text-secondary font-bold text-base hover:text-emerald-500 transition-colors relative z-10 group/link">
+                    <button class="open-product-modal inline-flex items-center gap-3 text-secondary font-bold text-base hover:text-emerald-500 transition-colors relative z-10 group/link bg-transparent border-0 cursor-pointer" data-title="LeetCRM" data-badge="Customer Relations" data-desc="Build stronger customer relationships with advanced ticketing, omnichannel support, and intelligent lead tracking.">
                         Explore LeetCRM 
                         <div class="w-8 h-8 rounded-full bg-gray-50 group-hover/link:bg-emerald-50 flex items-center justify-center transition-colors">
                             <i data-lucide="arrow-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
                         </div>
-                    </a>
+                    </button>
                 </div>
                 
                 <!-- Product 5 -->
-                <div class="bg-white/60 backdrop-blur-3xl p-10 rounded-[40px] shadow-[0_8px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_30px_60px_rgba(236,72,153,0.15)] transition-all duration-500 border border-white hover:border-pink-100 group relative overflow-hidden transform hover:-translate-y-2">
+                <div class="product-card-item bg-white/60 backdrop-blur-3xl p-10 rounded-[40px] shadow-[0_8px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_30px_60px_rgba(236,72,153,0.15)] transition-all duration-500 border border-white hover:border-pink-100 group relative overflow-hidden transform hover:-translate-y-2" data-category="analytics">
                     <div class="absolute inset-0 bg-gradient-to-br from-pink-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     <div class="absolute -right-20 -top-20 w-64 h-64 bg-pink-400/10 rounded-full blur-3xl group-hover:bg-pink-400/20 transition-colors duration-500"></div>
                     
@@ -947,16 +957,16 @@
                     </p>
                     <p class="text-gray-500 text-base mb-8 leading-relaxed relative z-10 font-light">Manage talent acquisition, payroll, performance, and employee well-being seamlessly in a single unified system.</p>
                     
-                    <a href="#" class="inline-flex items-center gap-3 text-secondary font-bold text-base hover:text-pink-500 transition-colors relative z-10 group/link">
+                    <button class="open-product-modal inline-flex items-center gap-3 text-secondary font-bold text-base hover:text-pink-500 transition-colors relative z-10 group/link bg-transparent border-0 cursor-pointer" data-title="LeetHR" data-badge="Human Resources" data-desc="Manage talent acquisition, payroll, performance, and employee well-being seamlessly in a single unified system.">
                         Explore LeetHR 
                         <div class="w-8 h-8 rounded-full bg-gray-50 group-hover/link:bg-pink-50 flex items-center justify-center transition-colors">
                             <i data-lucide="arrow-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
                         </div>
-                    </a>
+                    </button>
                 </div>
 
                 <!-- Product 6 -->
-                <div class="bg-white/60 backdrop-blur-3xl p-10 rounded-[40px] shadow-[0_8px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_30px_60px_rgba(6,182,212,0.15)] transition-all duration-500 border border-white hover:border-cyan-100 group relative overflow-hidden transform hover:-translate-y-2">
+                <div class="product-card-item bg-white/60 backdrop-blur-3xl p-10 rounded-[40px] shadow-[0_8px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_30px_60px_rgba(6,182,212,0.15)] transition-all duration-500 border border-white hover:border-cyan-100 group relative overflow-hidden transform hover:-translate-y-2" data-category="ecommerce">
                     <div class="absolute inset-0 bg-gradient-to-br from-cyan-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     <div class="absolute -right-20 -top-20 w-64 h-64 bg-cyan-400/10 rounded-full blur-3xl group-hover:bg-cyan-400/20 transition-colors duration-500"></div>
                     
@@ -970,12 +980,12 @@
                     </p>
                     <p class="text-gray-500 text-base mb-8 leading-relaxed relative z-10 font-light">Deploy and scale your applications globally with our secure, high-performance, edge-optimized cloud computing platform.</p>
                     
-                    <a href="#" class="inline-flex items-center gap-3 text-secondary font-bold text-base hover:text-cyan-500 transition-colors relative z-10 group/link">
+                    <button class="open-product-modal inline-flex items-center gap-3 text-secondary font-bold text-base hover:text-cyan-500 transition-colors relative z-10 group/link bg-transparent border-0 cursor-pointer" data-title="LeetCloud" data-badge="Global Infrastructure" data-desc="Deploy and scale your applications globally with our secure, high-performance, edge-optimized cloud computing platform.">
                         Explore LeetCloud 
                         <div class="w-8 h-8 rounded-full bg-gray-50 group-hover/link:bg-cyan-50 flex items-center justify-center transition-colors">
                             <i data-lucide="arrow-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
                         </div>
-                    </a>
+                    </button>
                 </div>
             </div>
         </div>
@@ -1524,6 +1534,268 @@ console.<span class="text-[#d2a8ff]">log</span>(<span class="text-[#a5d6ff]">`De
         </div>
     </section>
 
+    <!-- Pricing & Project Cost ROI Estimator Section -->
+    <section id="pricing" class="py-32 bg-white relative overflow-hidden border-t border-gray-100">
+        <div class="container mx-auto px-6 max-w-[1300px] relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-20">
+                <div class="inline-flex items-center justify-center px-5 py-2 bg-blue-50 rounded-full text-blue-600 font-bold text-xs tracking-widest border border-blue-100 mb-6 uppercase gap-2">
+                    <i data-lucide="tag" class="w-4 h-4 text-blue-600"></i> Transparent Plans & Estimator
+                </div>
+                <h2 class="text-4xl md:text-5xl font-extrabold text-secondary mb-6 tracking-tight">
+                    Flexible Pricing <span class="text-primary">& Cost Estimator</span>
+                </h2>
+                <p class="text-gray-500 text-lg font-light leading-relaxed">
+                    Choose a ready subscription plan or calculate custom project pricing dynamically.
+                </p>
+
+                <!-- Billing Switcher -->
+                <div class="inline-flex items-center gap-3 bg-gray-100 p-1.5 rounded-full mt-8 border border-gray-200">
+                    <span class="text-sm font-bold text-gray-700 px-3">Monthly</span>
+                    <label class="relative inline-flex items-center cursor-pointer">
+                        <input type="checkbox" id="pricing-toggle" class="sr-only peer">
+                        <div class="w-13 h-7 bg-gray-300 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-blue-600"></div>
+                    </label>
+                    <span class="text-sm font-bold text-gray-700 px-3 flex items-center gap-2">
+                        Annually <span class="bg-emerald-100 text-emerald-700 text-[10px] font-extrabold px-2 py-0.5 rounded-full uppercase">Save 20%</span>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Pricing Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24 max-w-[1200px] mx-auto">
+                <!-- Plan 1 -->
+                <div class="bg-gray-50/80 rounded-[32px] p-10 border border-gray-100 flex flex-col justify-between hover:shadow-xl transition-all duration-300">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-blue-600 bg-blue-50 px-3 py-1 rounded-full">Starter</span>
+                        <h3 class="text-2xl font-extrabold text-secondary mt-4 mb-2">SME Platform</h3>
+                        <p class="text-gray-500 text-sm mb-6">Ideal for single store or small growing teams.</p>
+                        <div class="text-4xl font-extrabold text-secondary mb-6 flex items-baseline gap-1">
+                            <span class="price-val" data-monthly="$499" data-annual="$399">$499</span>
+                            <span class="text-sm font-normal text-gray-400">/month</span>
+                        </div>
+                        <ul class="space-y-4 text-sm text-gray-600 mb-8 border-t border-gray-200/60 pt-6">
+                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Up to 5 Staff Users</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Core POS & Inventory</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Standard REST API</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> 99.5% SLA Uptime</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="btn btn-outline-round text-center w-full block font-bold">Choose Starter</a>
+                </div>
+
+                <!-- Plan 2 (Highlighted) -->
+                <div class="bg-[#0c1322] text-white rounded-[32px] p-10 border border-blue-500/30 flex flex-col justify-between shadow-2xl relative overflow-hidden transform md:-translate-y-4">
+                    <div class="absolute top-0 right-0 bg-gradient-to-l from-blue-600 to-purple-600 text-white text-[10px] font-extrabold px-4 py-1.5 rounded-bl-2xl uppercase tracking-widest">Most Popular</div>
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-blue-400 bg-blue-500/10 px-3 py-1 rounded-full border border-blue-400/20">Growth</span>
+                        <h3 class="text-2xl font-extrabold text-white mt-4 mb-2">Enterprise Suite</h3>
+                        <p class="text-gray-300 text-sm mb-6">Multi-branch operations & AI reporting.</p>
+                        <div class="text-4xl font-extrabold text-white mb-6 flex items-baseline gap-1">
+                            <span class="price-val" data-monthly="$1,299" data-annual="$999">$1,299</span>
+                            <span class="text-sm font-normal text-gray-400">/month</span>
+                        </div>
+                        <ul class="space-y-4 text-sm text-gray-300 mb-8 border-t border-white/10 pt-6">
+                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-blue-400"></i> Unlimited Users & Branches</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-blue-400"></i> Full LeetERP & AI Analytics</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-blue-400"></i> Native Flutter Apps Included</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-blue-400"></i> 24/7 Dedicated Support</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="btn btn-primary-round text-center w-full block font-bold shadow-lg shadow-blue-500/30">Get Started Growth</a>
+                </div>
+
+                <!-- Plan 3 -->
+                <div class="bg-gray-50/80 rounded-[32px] p-10 border border-gray-100 flex flex-col justify-between hover:shadow-xl transition-all duration-300">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-purple-600 bg-purple-50 px-3 py-1 rounded-full">Custom</span>
+                        <h3 class="text-2xl font-extrabold text-secondary mt-4 mb-2">Tailored Solution</h3>
+                        <p class="text-gray-500 text-sm mb-6">Full custom build with dedicated cloud engine.</p>
+                        <div class="text-4xl font-extrabold text-secondary mb-6">
+                            Custom
+                        </div>
+                        <ul class="space-y-4 text-sm text-gray-600 mb-8 border-t border-gray-200/60 pt-6">
+                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Dedicated Solutions Architect</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> On-Premise or Private Cloud</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Custom API & Legacy Sync</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> 99.99% SLA Guarantee</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="btn btn-outline-round text-center w-full block font-bold">Contact Sales</a>
+                </div>
+            </div>
+
+            <!-- Interactive ROI & Project Cost Calculator Widget -->
+            <div class="bg-gradient-to-br from-blue-50 via-white to-purple-50 rounded-[40px] p-8 md:p-12 border border-blue-100 shadow-xl max-w-4xl mx-auto">
+                <div class="text-center mb-8">
+                    <span class="text-xs font-bold uppercase tracking-widest text-blue-600 bg-white px-4 py-1.5 rounded-full border border-blue-100 shadow-sm">Interactive Calculator</span>
+                    <h3 class="text-2xl md:text-3xl font-extrabold text-secondary mt-3">Estimate Your Custom Project Cost</h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-bold text-secondary mb-2">Project Scope / Modules: <span id="module-count-display" class="text-blue-600">3 Modules</span></label>
+                            <input type="range" id="module-slider" min="1" max="10" value="3" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-bold text-secondary mb-3">Add-On Features:</label>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 text-sm font-semibold text-gray-700 cursor-pointer">
+                                    <input type="checkbox" id="addon-app" class="w-4 h-4 rounded text-blue-600 focus:ring-blue-500" checked>
+                                    Mobile App (Flutter iOS/Android) (+$1,000)
+                                </label>
+                                <label class="flex items-center gap-3 text-sm font-semibold text-gray-700 cursor-pointer">
+                                    <input type="checkbox" id="addon-ai" class="w-4 h-4 rounded text-blue-600 focus:ring-blue-500">
+                                    AI Predictive Analytics Engine (+$800)
+                                </label>
+                                <label class="flex items-center gap-3 text-sm font-semibold text-gray-700 cursor-pointer">
+                                    <input type="checkbox" id="addon-sla" class="w-4 h-4 rounded text-blue-600 focus:ring-blue-500">
+                                    24/7 Dedicated SLA Support (+$500)
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-md text-center">
+                        <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">Estimated Project Cost</span>
+                        <div id="calc-total-price" class="text-4xl font-extrabold text-blue-600 my-3">$2,500</div>
+                        <p id="calc-delivery-time" class="text-xs font-bold text-gray-500 mb-6">Estimated Delivery: 3-4 Weeks</p>
+                        <a href="#contact" class="btn btn-primary-round w-full block text-center font-bold text-sm">Request Formal Proposal</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Searchable FAQ Section -->
+    <section id="faq" class="py-32 bg-gray-50 relative overflow-hidden border-t border-gray-100">
+        <div class="container mx-auto px-6 max-w-[1000px] relative z-10">
+            <div class="text-center mb-16">
+                <div class="inline-block px-4 py-2 bg-white rounded-full text-primary font-bold text-sm tracking-wide shadow-sm border border-gray-100 mb-6">HELP CENTER</div>
+                <h2 class="text-4xl md:text-5xl font-extrabold text-secondary mb-6 tracking-tight">
+                    Frequently Asked <span class="text-primary">Questions</span>
+                </h2>
+                
+                <!-- FAQ Search Input -->
+                <div class="max-w-md mx-auto relative">
+                    <input type="text" id="faq-search-input" placeholder="Search questions (e.g. ERP, deployment, security)..." class="w-full bg-white border border-gray-200 rounded-full px-6 py-3.5 pl-12 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all text-sm">
+                    <i data-lucide="search" class="w-5 h-5 text-gray-400 absolute left-4 top-3.5"></i>
+                </div>
+            </div>
+
+            <!-- FAQ Accordion List -->
+            <div class="space-y-4" id="faq-list">
+                <!-- Item 1 -->
+                <div class="faq-item bg-white rounded-2xl p-6 border border-gray-100 shadow-sm transition-all duration-300">
+                    <button class="faq-toggle w-full flex items-center justify-between font-bold text-lg text-secondary text-left gap-4 bg-transparent border-0 cursor-pointer">
+                        <span>What makes Technoleet ERP different from off-the-shelf software?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transform transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden pt-4 text-gray-500 text-sm leading-relaxed border-t border-gray-100 mt-4">
+                        Technoleet ERP is engineered with modern microservice architecture, real-time sync, and built-in AI analytics. Unlike legacy ERPs, it requires zero clunky installations and works seamlessly across multi-branch environments.
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="faq-item bg-white rounded-2xl p-6 border border-gray-100 shadow-sm transition-all duration-300">
+                    <button class="faq-toggle w-full flex items-center justify-between font-bold text-lg text-secondary text-left gap-4 bg-transparent border-0 cursor-pointer">
+                        <span>How fast can we deploy a Technoleet solution?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transform transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden pt-4 text-gray-500 text-sm leading-relaxed border-t border-gray-100 mt-4">
+                        Our cloud SaaS solutions (LeetERP, LeetCommerce, ShopKing) can be launched in under 48 hours. Custom enterprise projects typically deploy within 2 to 6 weeks.
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="faq-item bg-white rounded-2xl p-6 border border-gray-100 shadow-sm transition-all duration-300">
+                    <button class="faq-toggle w-full flex items-center justify-between font-bold text-lg text-secondary text-left gap-4 bg-transparent border-0 cursor-pointer">
+                        <span>Is multi-branch & multi-currency inventory supported?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transform transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden pt-4 text-gray-500 text-sm leading-relaxed border-t border-gray-100 mt-4">
+                        Yes! All our platforms feature central warehouse allocations, automated branch transfer tracking, and real-time multi-currency conversions.
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="faq-item bg-white rounded-2xl p-6 border border-gray-100 shadow-sm transition-all duration-300">
+                    <button class="faq-toggle w-full flex items-center justify-between font-bold text-lg text-secondary text-left gap-4 bg-transparent border-0 cursor-pointer">
+                        <span>What type of support and SLA uptime guarantee do you offer?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 transform transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden pt-4 text-gray-500 text-sm leading-relaxed border-t border-gray-100 mt-4">
+                        We guarantee 99.9% uptime across all our cloud servers. Enterprise clients receive 24/7 dedicated engineering SLA support and automated daily backups.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Contact Section -->
+    <section id="contact" class="py-32 bg-white relative overflow-hidden border-t border-gray-100">
+        <div class="container mx-auto px-6 max-w-[1200px] relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <!-- Contact Information -->
+                <div>
+                    <div class="inline-flex items-center justify-center px-4 py-2 bg-blue-50 rounded-full text-blue-600 font-bold text-sm tracking-wide mb-6">GET IN TOUCH</div>
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-secondary mb-6 leading-tight">
+                        Let's Build Something <span class="text-primary">Extraordinary</span>
+                    </h2>
+                    <p class="text-gray-500 text-lg leading-relaxed mb-10">
+                        Have a project in mind or need a custom solution for your business? Send us a message and our engineering leads will respond within 2 hours.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4 p-4 rounded-2xl bg-gray-50 border border-gray-100">
+                            <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0"><i data-lucide="mail" class="w-6 h-6"></i></div>
+                            <div>
+                                <span class="text-xs text-gray-400 font-bold uppercase">Direct Email</span>
+                                <h4 class="font-bold text-secondary text-base">contact@technoleet.com</h4>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 p-4 rounded-2xl bg-gray-50 border border-gray-100">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center flex-shrink-0"><i data-lucide="phone-call" class="w-6 h-6"></i></div>
+                            <div>
+                                <span class="text-xs text-gray-400 font-bold uppercase">Phone & WhatsApp</span>
+                                <h4 class="font-bold text-secondary text-base">+880 1700-000000</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-gray-50/80 rounded-[32px] p-8 md:p-10 border border-gray-200/80 shadow-lg">
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label class="block text-xs font-bold text-secondary uppercase mb-2">Your Name</label>
+                            <input type="text" id="contact-name" required placeholder="Raihan Islam" class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-blue-500 transition-colors">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-secondary uppercase mb-2">Business Email</label>
+                            <input type="email" id="contact-email" required placeholder="raihan@example.com" class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-blue-500 transition-colors">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-secondary uppercase mb-2">Estimated Budget: <span id="contact-budget-val" class="text-blue-600">$10,000</span></label>
+                            <input type="range" id="contact-budget-slider" min="1000" max="50000" step="1000" value="10000" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-secondary uppercase mb-2">Project Message</label>
+                            <textarea id="contact-message" rows="4" required placeholder="Describe your business needs..." class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-blue-500 transition-colors resize-none"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary-round w-full py-4 text-center font-bold text-base shadow-lg shadow-blue-500/20">Send Proposal Request</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA Banner Section -->
     <section class="py-24 bg-white">
         <div class="container mx-auto px-6 max-w-[1300px]">
@@ -1737,6 +2009,65 @@ console.<span class="text-[#d2a8ff]">log</span>(<span class="text-[#a5d6ff]">`De
             </div>
         </div>
     </footer>
+
+    <!-- Product Quick View Modal -->
+    <div id="product-modal-overlay" class="modal-overlay">
+        <div class="modal-card">
+            <button id="product-modal-close" class="modal-close-btn">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            <span id="modal-product-badge" class="inline-block px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs font-bold uppercase tracking-widest mb-3">Enterprise</span>
+            <h3 id="modal-product-title" class="text-3xl font-extrabold text-secondary mb-4">LeetERP</h3>
+            <p id="modal-product-desc" class="text-gray-500 text-base leading-relaxed mb-6">Product details description goes here.</p>
+            
+            <div class="space-y-4 mb-8 bg-gray-50 p-6 rounded-2xl border border-gray-100">
+                <div class="flex items-center gap-3 text-sm font-semibold text-secondary">
+                    <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-500"></i> Multi-branch real-time data sync
+                </div>
+                <div class="flex items-center gap-3 text-sm font-semibold text-secondary">
+                    <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-500"></i> Built-in AI predictive forecasting
+                </div>
+                <div class="flex items-center gap-3 text-sm font-semibold text-secondary">
+                    <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-500"></i> Auto-scaling Cloud REST API & SDKs
+                </div>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <a href="#contact" id="modal-request-demo" class="btn btn-primary-round font-bold text-sm px-6 py-3">Request Live Demo</a>
+                <button id="modal-close-secondary" class="btn btn-outline-round font-bold text-sm px-6 py-3">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Demo Player Modal -->
+    <div id="demo-modal-overlay" class="modal-overlay">
+        <div class="modal-card max-w-3xl">
+            <button id="demo-modal-close" class="modal-close-btn">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            <div class="mb-4">
+                <span class="inline-block px-3 py-1 bg-purple-50 text-purple-600 rounded-full text-xs font-bold uppercase tracking-widest mb-2">Live Demo Walkthrough</span>
+                <h3 class="text-2xl font-extrabold text-secondary">Technoleet Platform Architecture Overview</h3>
+            </div>
+            <div class="relative aspect-video bg-black rounded-2xl overflow-hidden flex items-center justify-center border border-gray-800 shadow-2xl">
+                <div class="text-center p-8">
+                    <div class="w-16 h-16 rounded-full bg-blue-600/90 text-white mx-auto flex items-center justify-center mb-4 shadow-lg shadow-blue-500/40">
+                        <i data-lucide="play" class="w-8 h-8 ml-1"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-1">Interactive Product Tour</h4>
+                    <p class="text-xs text-gray-400">Discover how Technoleet ecosystem powers enterprise scale.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" title="Back to top">
+        <i data-lucide="arrow-up" class="w-5 h-5"></i>
+    </button>
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container"></div>
 
     <!-- Custom JS -->
     <script src="js/script.js"></script>
