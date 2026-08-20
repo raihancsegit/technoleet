@@ -1,22 +1,27 @@
 :root {
-    --primary: #007EDD;
-    --primary-light: #309df0;
-    --primary-dark: #0060ad;
-    --text-heading: #202745;
-    --text-body: #454F5E;
+    --primary: #0066FF;
+    --primary-light: #388EFF;
+    --primary-dark: #0048CE;
+    --accent-cyan: #00D2FF;
+    --accent-emerald: #10B981;
+    --accent-purple: #8B5CF6;
+    --text-heading: #0F172A;
+    --text-body: #475569;
     --bg-light: #ffffff;
-    --bg-page: #f8fafc;
+    --bg-page: #F8FAFC;
     
     /* Gradients */
-    --gradient-text: linear-gradient(90deg, #0380de, #33b794, #6361c5);
+    --gradient-text: linear-gradient(135deg, #0066FF 0%, #00D2FF 50%, #8B5CF6 100%);
+    --gradient-primary: linear-gradient(135deg, #0066FF 0%, #00D2FF 100%);
+    --gradient-dark: linear-gradient(135deg, #060C19 0%, #0F172A 100%);
     
     /* Node Colors */
-    --node-blue: #0091FF;
-    --node-orange: #FE832B;
-    --node-green: #24B18E;
-    --node-purple: #7A4FFA;
-    --node-red: #E61B73;
-    --node-teal: #1DB8AA;
+    --node-blue: #0066FF;
+    --node-orange: #FF7A00;
+    --node-green: #10B981;
+    --node-purple: #8B5CF6;
+    --node-red: #F43F5E;
+    --node-teal: #06B6D4;
 }
 
 * {
@@ -278,8 +283,11 @@ a {
    Hero Section
    ========================================================================== */
 .hero {
-    padding: 80px 0;
-    background: radial-gradient(circle at right center, rgba(230, 245, 255, 0.5) 0%, rgba(255,255,255,1) 50%);
+    padding: 90px 0;
+    background: 
+        radial-gradient(circle at 85% 20%, rgba(0, 102, 255, 0.08) 0%, rgba(0, 210, 255, 0.04) 40%, transparent 70%),
+        radial-gradient(circle at 10% 80%, rgba(139, 92, 246, 0.06) 0%, transparent 60%),
+        #ffffff;
     min-height: calc(100vh - 80px);
     display: flex;
     align-items: center;
@@ -800,11 +808,55 @@ a {
     box-shadow: 0 4px 14px rgba(0, 126, 221, 0.3);
 }
 
-.time-tab-btn.active-time-tab {
-    background-color: #007EDD;
+/* ==========================================================================
+   Stats Section Dark Theme Enhancement
+   ========================================================================== */
+#stats {
+    background: linear-gradient(180deg, #060c19 0%, #0a1428 100%) !important;
     color: #ffffff;
-    border-color: #007EDD;
-    box-shadow: 0 4px 14px rgba(0, 126, 221, 0.3);
+}
+
+#stats h2 {
+    color: #ffffff !important;
+}
+
+#stats p {
+    color: #94a3b8 !important;
+}
+
+#stats .stat-card-glass {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease;
+}
+
+#stats .stat-card-glass:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(0, 210, 255, 0.3);
+    transform: translateY(-6px);
+    box-shadow: 0 30px 60px rgba(0, 102, 255, 0.25);
+}
+
+#stats .counter-val {
+    background: linear-gradient(135deg, #00D2FF 0%, #388EFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#stats .time-tab-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: #94a3b8;
+}
+
+#stats .time-tab-btn.active-time-tab {
+    background: linear-gradient(135deg, #0066FF, #00D2FF);
+    color: #ffffff;
+    border-color: transparent;
+    box-shadow: 0 6px 20px rgba(0, 102, 255, 0.4);
 }
 
 /* ==========================================================================
